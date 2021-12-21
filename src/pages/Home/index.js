@@ -1,12 +1,10 @@
 import { useState } from 'react';
 import { login } from '../../services/firebase';
-import { useHistory } from 'react-router-dom';
 
 import './Home.css';
 
-export default function Home(props) {
+export default function Home() {
     const [ state, setState ] = useState(getInitialState());
-    const history = useHistory();
 
     function getInitialState() {
         return {
@@ -27,7 +25,6 @@ export default function Home(props) {
         const { email, password } = state;
         if(!email || !password)  return;
         await login(email, password);
-        history.push('/resources');
         setState(getInitialState());
     };
 

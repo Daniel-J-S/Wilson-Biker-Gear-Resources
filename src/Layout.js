@@ -21,19 +21,13 @@ function App() {
   return (
     <>
      <Header user={user} />
-     <Switch>
-       <Route exact path="/">
-         <Home />
-       </Route>
-       <Route exact path="/resources" render={() => {
-         if(!user) {
-           return <Redirect to="/" />;
-         } else {
-           return <Index />;
-         }
-       }}>
-       </Route>
-     </Switch>
+       <Route exact path="/" render={() => {
+          if(!user) {
+            return <Home />
+          } else {
+            return <Index />;
+          }
+       }} />
     </>
   );
 }
