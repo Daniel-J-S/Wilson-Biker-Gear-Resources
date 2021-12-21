@@ -1,0 +1,63 @@
+.Admin {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.Admin ul {
+    padding: 0;
+    margin-top: 3rem;
+    width: 15rem;
+    list-style: none;
+}
+
+.Admin > form {
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    min-width: 15rem;
+}
+
+.Admin > form label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.Admin > form input {
+    height: 2rem;
+    border-radius: 3px;
+    border-width: 1px;
+}
+
+.Admin > form input[type="submit"] {
+    background-color: #1e90ff;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+    appearance: none;
+}
+
+@media (min-width: 768px) {
+    .Admin {
+        align-items: center;
+    }
+    
+    .Admin > form {
+        margin-top: 0;
+        min-width: 20rem;
+    }
+    
+    .Admin > form input {
+        width: 12rem;
+    }
+    
+    .Admin > form input[type="submit"] {
+        width: 100%;
+    }
+}

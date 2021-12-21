@@ -11,11 +11,11 @@
     padding: 2rem 1rem !important;
 }
 
-.Header > img {
+.Header img {
     height: 5rem;
 }
 
-.Header > button {
+.Header button {
     background-color: #000;
     border: none;
     font-family: 'Bernier', Helvetica;

@@ -2,8 +2,8 @@ import './Index.css';
 import data from '../../data/resources.json';
 
 export default function Index(props) {
-    const indexItems = data.map(d => (
-        <article>
+    const indexItems = data.map((d, i) => (
+        <article key={i}>
             <h3>{d.title}</h3>
             <div className="iframe-container">
                 <iframe 
@@ -13,11 +13,11 @@ export default function Index(props) {
                     title="YouTube video player" 
                     frameBorder="0" 
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowFullScreen 
+                    allowFullScreen
                 />
             </div>
         </article>
-    ))
+    ));
 
     return (
         <main className="Index">
