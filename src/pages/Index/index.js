@@ -28,6 +28,7 @@ export default function Index(props) {
             if(snapshot) {
                 snapshot.forEach(child => {
                     data.push({id: child.key, ...child.val()})
+                    data.sort((a, b) => a.rank - b.rank);
                 });
             } 
             setResources(data);

@@ -10,6 +10,7 @@ export default function Admin() {
 
     function getInitialState() {
         return {
+            rank: 1,
             title: '',
             videoLink: '',
         }
@@ -24,9 +25,9 @@ export default function Admin() {
 
     const handleSubmit = async e => {
         e.preventDefault();
-        const { title, videoLink } = formState;
+        const {rank, title, videoLink } = formState;
         if(!title || !videoLink)  return;
-        database.ref('/resources').push({ title, videoLink }, () => {
+        database.ref('/resources').push({rank, title, videoLink }, () => {
             setFormState(getInitialState());
         });
     };
@@ -51,6 +52,7 @@ export default function Admin() {
             if(snapshot) {
                 snapshot.forEach(child => {
                     data.push({id: child.key, ...child.val()})
+                    data.sort((a, b) => a.rank - b.rank);
                 });
             } 
             setResources(data);
@@ -63,6 +65,14 @@ export default function Admin() {
     return (
         <main className="Admin">
             <form onSubmit={handleSubmit}>
+                <label>Rank
+                    <input 
+                        type="number" 
+                        name="rank"
+                        onChange={handleChange}
+                        value={formState.rank} 
+                    />
+                </label>
                 <label>Title
                     <input 
                         type="text" 
