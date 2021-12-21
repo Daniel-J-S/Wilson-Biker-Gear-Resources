@@ -1,6 +1,39 @@
 .Index {
     flex-grow: 1;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    padding-top: 5rem;
+}
+
+.Index section {
+    display: flex;
+    flex-grow: 1;
+}
+
+.Index > section article {
+    width: 80vw;
+    margin: 2rem 0;
+}
+
+.Index > section article h3 {
+    text-transform: capitalize;
+    margin: 2rem 0;
+}
+
+.iframe-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%;
+}
+
+.Index iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
 }
