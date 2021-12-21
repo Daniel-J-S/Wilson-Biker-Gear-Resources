@@ -1,4 +1,5 @@
 import { logout } from '../../services/firebase';
+import logo from '../../images/logo.svg';
 import './Header.css';
 
 export default function Header({ user }) {
@@ -7,7 +8,7 @@ export default function Header({ user }) {
             justifyContent: user ? 'space-between': 'center',
             padding: user ? '0 1rem' : 0,
         }}>
-            <h1>WBG Resources</h1>
+            <img src={logo} alt="Wilson Bike Gear" />
             {
                 user &&
                 <button onClick={logout}>Logout</button>

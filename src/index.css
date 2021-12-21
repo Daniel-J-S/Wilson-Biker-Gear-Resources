@@ -1,10 +1,16 @@
+@font-face {
+  font-family: 'Bernier';
+  src: url('./fonts/BERNIERRegular-Regular.ttf') format('ttf'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+   url('./fonts/BERNIERRegular-Regular.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+
 * {
   margin: 0;
   box-sizing: border-box;
 }
 
 body {
-  font-family: Helvetica, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Bernier', Helvetica, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -16,3 +22,4 @@ body {
   display: flex;
   flex-direction: column;
 }
+

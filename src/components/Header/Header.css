@@ -1,20 +1,22 @@
 .Header {
     display: flex;
-    background-color: #333;
+    background-color: #000;
     color: #fff;
-    height: 5rem;
+    height: 6rem;
     align-items: center;
     justify-content: center;
     box-shadow: 1px 1px 5px 3px #808080;
+    padding: 2rem 1rem !important;
 }
 
-.Header > h1 {
-    font-size: .9rem;
+.Header > img {
+    height: 5rem;
 }
 
 .Header > button {
-    background-color: #333;
+    background-color: #000;
     border: none;
+    font-family: 'Bernier', Helvetica;
     font-size: 1rem;
     font-weight: 700;
     color: #fff;
