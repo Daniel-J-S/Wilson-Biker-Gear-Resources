@@ -23,3 +23,6 @@ body {
   flex-direction: column;
 }
 
+main {
+  margin-top: 6rem;
+}
