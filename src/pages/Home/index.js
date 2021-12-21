@@ -1,8 +1,12 @@
 import { useState } from 'react';
+import { login } from '../../services/firebase';
+import { useHistory } from 'react-router-dom';
+
 import './Home.css';
 
 export default function Home(props) {
     const [ state, setState ] = useState(getInitialState());
+    const history = useHistory();
 
     function getInitialState() {
         return {
@@ -18,8 +22,12 @@ export default function Home(props) {
         });
     };
 
-    const handleSubmit = e => {
+    const handleSubmit = async e => {
         e.preventDefault();
+        const { email, password } = state;
+        if(!email || !password)  return;
+        await login(email, password);
+        history.push('/resources');
         setState(getInitialState());
     };
 

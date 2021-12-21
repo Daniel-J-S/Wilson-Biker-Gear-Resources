@@ -31,6 +31,8 @@
     color: #ffffff;
     text-transform: uppercase;
     font-weight: 700;
+    cursor: pointer;
+    appearance: none;
 }
 
 @media (min-width: 768px) {

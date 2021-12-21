@@ -7,3 +7,26 @@
     justify-content: center;
     box-shadow: 1px 1px 5px 3px #808080;
 }
+
+.Header > h1 {
+    font-size: .9rem;
+}
+
+.Header > button {
+    background-color: #333;
+    border: none;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .Header > h1 {
+        font-size: 1.5rem;
+    }
+    .Header > button {
+        font-size: 1.7rem;
+    }
+}
+
