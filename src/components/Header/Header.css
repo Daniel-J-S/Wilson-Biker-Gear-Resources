@@ -9,6 +9,7 @@
     justify-content: center;
     box-shadow: 1px 1px 5px 3px #808080;
     padding: 2rem 1rem !important;
+    z-index: 2;
 }
 
 .Header img {

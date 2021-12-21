@@ -39,7 +39,7 @@ export default function Admin() {
     const resourceList = resources.map(r => {
         return (
             <li key={r.id}>
-                <h3>{r.title}</h3>
+                <h3>{r.title.length > 25 ? r.title.substr(0, 25) + '...' : r.title}</h3>
                 <button onClick={() => handleDelete(r.id)}>Delete</button>
             </li>
         );
